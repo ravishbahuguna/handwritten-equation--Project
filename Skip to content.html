@@ -1,0 +1,222 @@
+Skip to content
+Product
+Solutions
+Open Source
+Pricing
+
+Search or jump to...
+Sign in
+Sign up
+thundercoding07
+/
+Awesome-Animated-Landing-Page-Using-HTML-and-CSS
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+Commit
+html file added
+ main
+@thundercoding07
+thundercoding07 committed 2 weeks ago 
+1 parent bfbff2c
+commit 3a90977
+Showing 1 changed file with 39 additions and 0 deletions.
+ 39 changes: 39 additions & 0 deletions39  
+index.html
+@@ -0,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div id="box1">
+
+        </div>
+
+        <div id="box2">
+            <div id="text">
+                THUNDER<br>CODING   
+            </div>
+        </div>
+
+        <div id="box3">
+            <div id="container">
+                <div id="logo">
+                    <h1>thunder coding</h1>
+                </div>
+                <div id="menu">
+                    <ul>
+                        <li>home</li>
+                        <li>services</li>
+                        <li>about</li>
+                        <li>contact</li>
+                        <li>help</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #1e242a;
+    font-family: 'Poppins', sans-serif;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+#box1{
+    width: 530px;
+    height: 625px;
+    background: url(./images/2.png);
+    position: absolute;
+    bottom: -100%;
+    left: 30%;
+    animation: anim 2s forwards, anim2 3s forwards 3s;
+}
+
+#box1::after{
+    content: '';
+    position: absolute;
+    width: 530px;
+    height: 625px;
+    background-image: url(./images/1.png);
+    left: 0px;
+    z-index: -1;
+}
+
+@keyframes anim{
+    from{
+        bottom: -100%;
+    }
+    to{
+        bottom: 0%;
+    }
+}
+
+@keyframes anim2{
+    from{
+        left: 30%;
+        width: 530px;
+    }
+    to{
+        width: 0px;
+        left: 50%;
+    }
+}
+
+#box2{
+    width: auto;
+    height: auto;
+    color: #fff;
+    font-size: 8em;
+    font-weight: 500;
+    line-height: 130px;
+    position: absolute;
+    top: 250px;
+    left: 100px;
+    overflow: hidden;
+}
+
+#text h1{
+    position: relative;
+    left: -100%;
+    animation: anim3 2s forwards 3s;
+}
+
+@keyframes anim3{
+    from{
+        left: -100%;
+    }
+    to{
+        left: 0%;
+    }
+}
+
+#box3{
+    overflow: hidden;
+}
+
+#container{
+    width: 100%;
+    position: absolute;
+    top: -100%;
+    animation: anim4 2s forwards 2.5s;
+}
+
+#logo{
+    float: left;
+    margin-left: 100px;
+    margin-top: 20px;
+
+}
+
+#logo h1{
+    font-size: 20px;
+    color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#logo h1:hover{
+    scale: 110%;
+}
+
+#menu{
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-right: 80px;
+    margin-top: 20px;
+    float: right;
+    text-transform: uppercase;
+}
+
+#menu ul{
+    list-style: none;
+}
+
+#menu ul li{
+    display: inline-block;
+    margin-left: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#menu ul li:hover{
+    scale: 120%;
+}
+
+@keyframes anim4{
+    from{
+        top:  -100%;
+    }
+    to{
+        top:  0%;
+    }
+
+}
